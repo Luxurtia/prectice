@@ -267,3 +267,33 @@ Console.WriteLine(result3);
     string age = $"{10}살"   => 확실함
 */
 
+// if 조건문
+/*
+    int hp = 30;
+
+    if(hp <= 50)    => 조건
+    {
+        // 조건이 참일때 실행할 코드
+        Console.WriteLine("체력이 절반 이하입니다")
+    }
+    else
+    {
+        // 조건 이외의 상황일때 실행할 코드
+        Console.WriteLine("체력이 절반 이상입니다")
+    }
+
+    ## 점수가 90 이상이면 A, 80이상 B, 70이상 C, 60이상 D, 나머지 F
+
+    int score = 77;
+
+    if(score >= 90)
+    {
+        Console.WriteLine("A학점")
+    }
+    else if(score >= 80)
+    {
+        Console.WriteLine("B학점")
+    }
+    ....
+
+*/
