@@ -436,3 +436,47 @@ else
     Console.WriteLine("F학점");
 }
 */
+
+// 반복문
+//  ㄴ 조건이 참일 경우 특정 코드를 반복해서 실행하는 문법
+// 조건 => true or false
+/*
+    ## while(조건)
+        ㄴ 이때 조건은 반드시 bool 형식
+    
+    int i = 1;
+    while (i <= 5)
+    {
+        Console.WriteLine(i);
+        i++;
+    }
+
+    ## do-while
+        조건을 나중에 검사하여 최소 한번의 실행은 보장
+    
+    int i = 10;
+
+    do
+    {
+        Console.WriteLine(i);
+        i++;
+    } while (i <= 5);
+    
+    입력을 받기에 사용하기 좋음
+
+    int score;
+    string input;
+
+    do
+    {
+        Console.Write("점수 입력 (0~100): ");
+        input = Console.ReadLine();
+    } while (!int.TryParse(input, out score) || score < 0 || score > 100);
+
+    Console.WriteLine($"입력한 점수: {score}");
+
+    ## for(조건)
+*/
+
+
+
