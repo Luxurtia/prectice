@@ -78,6 +78,8 @@ Console.WriteLine(num);
 /*
     bool =>  Ture, False
 
+    ## ==과 = 차이
+
     ==          같다
     !=          같지 않다
     <, >        작다 or 크다
@@ -147,3 +149,44 @@ Console.WriteLine(result3);
     int numberA = (int)a;
 */
 
+// 부동 소수점
+//  ㄴ 소수점 위치가 고정되지 않고 움직이는 방식으로 실수를 저장하는 방법
+/*
+    
+    float   4byte  06~09자리  f(접미사)
+    double  8byte  15~17자리 d
+    decimal 16byte 28~29자리 m
+
+    float f = 3.14f;
+    double d = 3.14; (기본이 double이여서 생략)
+    decimal m = 3.14m;
+    
+    정수는 정상적으로 기재하지만 소수점은 그럴수없음
+    (10진수) 1.2 * 10^8 = 120,000,000 인것 처럼
+    (2진수)  1.101 * 2^2 = 110.1 임
+
+    6.5 => 110.1(2진수) => 1.101 * 2^2
+
+    ####### 0.1을 2진수로 바꾸면 0.0001100110011.... 으로 무한소수가 되어 근삿값으로 저장됨
+    double a = 0.1 + 0.2;
+    Console.WriteLine(a == 0.3);   // False
+    Console.WriteLine(a.ToString("R")); // 0.30000000000000004
+
+    decimal b = 0.1m + 0.2m;
+    Console.WriteLine(b == 0.3m);  // True (decimal은 10진수라 정확)
+    
+    ##### 그래도 비교할때는 == 으로 비교하면 오류남
+        ㄴ 게임등에서 이동할때 특정 지점에 도착했지만 미세한 오차로 인식을 못하는 경우가 있어 == 사용 금지
+    double x = 0.1 + 0.2;
+    double y = 0.3;
+
+    bool same = Math.Abs(x - y) < 1e-9;   // True
+
+    ## 특수 값(0등) 으로 나누어도 예외가 나지 않음
+    double p = 1.0 / 0;     // ∞ (double.PositiveInfinity)
+    double n = -1.0 / 0;    // -∞ (double.NegativeInfinity)
+    double nan = 0.0 / 0;   // NaN (Not a Number)
+
+    Console.WriteLine(nan == nan);        // False ← NaN은 자기 자신과도 다름!
+    Console.WriteLine(double.IsNaN(nan)); // True  ← 이렇게 확인해야 함
+*/
