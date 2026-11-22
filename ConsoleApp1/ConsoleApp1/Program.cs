@@ -97,7 +97,6 @@ Console.WriteLine(num);
     && : 그리고, 앞 뒤 조건이 모두 참일때
     || : 또는, 둘중 하나라도 참일때
     ! : 아니다, 뒤에 오는 것이 거짓일때
-*/
 
 bool isOld = true;
 bool isStudent = false;
@@ -109,3 +108,17 @@ Console.WriteLine(result2);
 
 bool result3 = !isOld;
 Console.WriteLine(result3);
+
+*/
+
+// 연산자 우선순위
+/*
+    1. !, ++, --
+    2. *, /, %
+    3, +, -
+    4. <, >, <=, >=
+    5. ==, !=
+    6. &&
+    7. ||
+    8. =, += 대입
+*/
