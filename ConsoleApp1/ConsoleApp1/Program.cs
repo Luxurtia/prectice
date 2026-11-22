@@ -297,3 +297,25 @@ Console.WriteLine(result3);
     ....
 
 */
+
+// switch 문
+//  하나의 값을 여러 조건과 비교해서 조건에 맞다면 코드를 실행하고 이후 다른 조건은 비교하지 않는 문법
+/*
+int day = 3;
+
+switch(day)
+{
+    case 1:
+        Console.WriteLine("월요일");
+        break;
+    case 2:
+        Console.WriteLine("화요일");
+        break;
+    case 3:
+        Console.WriteLine("수요일");
+        break;
+    default:                                // 일치하는 case가 없을 경우 사용되는 코드
+        Console.WriteLine("404 unfound");
+        break;
+}
+*/
