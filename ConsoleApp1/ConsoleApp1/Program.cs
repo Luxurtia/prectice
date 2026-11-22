@@ -132,3 +132,18 @@ Console.WriteLine(result3);
     char u = '\u0041';    // 유니코드로 'A'
     char n = '\n';        // 줄바꿈 같은 이스케이프 문자
 */
+
+// 형변환
+/*
+    ## 묵시적 변환   작은 범위 -> 큰 범위   값이 짤릴 이유가없음 그냥 변환
+    int small = 5;
+    long big = small;
+
+    ## 명시적 변환   큰 범위 -> 작은 범위   값이 짤릴 수 도 있음 명시적 변환
+    long huge = 300;
+    int n = (int)huge
+    
+    char a = 'A';
+    int numberA = (int)a;
+*/
+
