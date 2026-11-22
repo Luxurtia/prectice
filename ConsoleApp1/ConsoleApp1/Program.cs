@@ -383,7 +383,56 @@ switch ((Menu)menu) // switch(주어진 값)
         Console.WriteLine("존재하지 않는 메뉴입니다.");
         break;
 }
-
-
 */
 
+
+// Console에서 값을 읽는법 
+/*
+string input = Console.ReadLine();  
+Console.WriteLine($"입력받은 값 : {input}");
+*/
+
+// 데이터 변환
+/*
+    ## string -> int
+
+    // int.Parse("문자") '문자'에 들어가는 문자가 숫자로 변환될 수 없다면 에러
+    int num = int.Parse("123"); 
+*/
+
+
+// 문제 1
+// 점수를 입력 받고 그에 맞는 성적을 출력
+// 90 a, 80 b, 70 c , 60 d, 나머지 f
+/*
+string score = Console.ReadLine();
+
+if (score == "")
+{
+    Console.WriteLine("점수를 입력하세요");
+    return;
+}
+
+int realscore = int.Parse(score);
+
+if (realscore >= 90)
+{
+    Console.WriteLine("A학점");
+}
+else if (realscore >= 80)
+{
+    Console.WriteLine("B학점");
+}
+else if (realscore >= 70)
+{
+    Console.WriteLine("C학점");
+}
+else if (realscore >= 60)
+{
+    Console.WriteLine("D학점");
+}
+else
+{
+    Console.WriteLine("F학점");
+}
+*/
