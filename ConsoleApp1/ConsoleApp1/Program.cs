@@ -79,6 +79,8 @@ Console.WriteLine(num);
     bool =>  Ture, False
 
     ## ==과 = 차이
+       == => 비교 연산자 
+        = => 대입 연산자
 
     ==          같다
     !=          같지 않다
@@ -137,14 +139,44 @@ Console.WriteLine(result3);
 
 // 형변환
 /*
-    ## 묵시적 변환   작은 범위 -> 큰 범위   값이 짤릴 이유가없음 그냥 변환
+    ## 묵시적 변환   작은 범위 -> 큰 범위   값이 짤릴 이유가없음 그냥 변환(데이터 손실이 없을 때)
     int small = 5;
     long big = small;
 
-    ## 명시적 변환   큰 범위 -> 작은 범위   값이 짤릴 수 도 있음 명시적 변환
+    ## 명시적 변환(캐스팅)   큰 범위 -> 작은 범위   값이 짤릴 수 도 있음 명시적 변환
     long huge = 300;
     int n = (int)huge
-    
+
+    double d = 3.99;
+    int i = (int)d;          // 3 (소수점 버림, 반올림 아님)
+
+    long big = 5_000_000_000;
+    int x = (int)big;        // 705032704 ← 범위를 넘어서 값이 깨짐
+
+    int n = 66;
+    char c = (char)n;        // 'B'
+
+    float f = (float)3.14;   // double → float
+
+    ## 오버 플로우(변수의 범위를 넘어서 음수로 변환되버림)
+        ㄴ 오류를 띄우지 않음
+        long big = 5_000_000_000;
+        int x = checked((int)big);  => checked를 써야 OverFlowException이 나옴
+
+    ## 문자열 <-> 숫자   일반적인 캐스팅으로는 바꿀수 없음
+        
+    # 숫자 -> 문자열
+    int score = 100;
+    string s1 = score.ToString();     // "100"
+    string s2 = $"점수: {score}";     // 문자열 보간
+    string s3 = 3.14159.ToString("F2"); // "3.14" (소수점 2자리)
+
+    # 문자열 -> 숫자
+    int.Parse("123")	            예외 발생	형식이 확실할 때
+    int.TryParse("123", out int n)	false 반환	사용자 입력에 가장 추천
+    Convert.ToInt32("123")	        예외 발생	null이면 0을 반환
+
+
     char a = 'A';
     int numberA = (int)a;
 */
@@ -189,4 +221,13 @@ Console.WriteLine(result3);
 
     Console.WriteLine(nan == nan);        // False ← NaN은 자기 자신과도 다름!
     Console.WriteLine(double.IsNaN(nan)); // True  ← 이렇게 확인해야 함
+
+    #### 형변환
+    double d = 3.99;
+    int i = (int)d;               // 3  ← 반올림이 아니라 소수점 아래를 버림
+    int r = (int)Math.Round(d);   // 4
+
+    int big = 123456789;
+    float f = big;                // 123456792 ← 정밀도 부족으로 값이 바뀜
 */
+
