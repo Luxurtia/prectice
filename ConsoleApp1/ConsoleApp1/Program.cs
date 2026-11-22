@@ -508,9 +508,153 @@ else
     Console.WriteLine($"입력한 점수: {score}");
 
     ## for(조건)
+    // int i는 카운팅 할 변수 선언 및 할당 -> 기존 변수를 가져와도됨
+    // i < 10 -> 조건 true일경우만 반복
+    // i++ 후처리 반복이 될때마다 카운트 값의 처리방법
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 0) break;
+        Console.WriteLine(i);
+    }
+
+    for (int i = 10; i > 0; i += 2)
+    {
+        if (i == i*5) break;
+        Console.WriteLine(i);
+    }
+
+Console.WriteLine("구구단 출력하기");
+Console.WriteLine("단 수를 입력해 주세요");
+string input = Console.ReadLine();
+int n = int.Parse(input);
+
+Console.WriteLine($"{n}단 출력");
+
+for(int i = 1; i < 10; i++)
+{
+    Console.WriteLine(n * i);
+}
+
+// 구구단 전체 출력
+for (int s = 1; s < 10; s++)
+{
+    Console.WriteLine($"{s}단 출력");
+    for(int i = 1;i < 10; i++)
+    {
+        Console.WriteLine(s * i);
+    }
+}
 */
 
+// 구구단 출력 예제
+// 구구단 프로그램에 오신걸 환영합니다
+// 구구단을 실행하고싶으시면 1. 종료하고싶다면 0번 입력
 
+// 다시 구구단 프로그램에 오신걸 환영합니다 부터 출력해서 다시 처음부터
+
+/*
+Console.WriteLine("구구단 프로그램에 오신걸 환영합니다.");
+Console.WriteLine("실행하고 싶으시면 1, 종료하고싶으시면 0번을 입력하세요");
+int end = int.Parse(Console.ReadLine());
+
+switch (end)
+{
+    case 0:
+        break;
+    case 1:
+        Console.WriteLine("구구단 출력하기");
+        Console.WriteLine("단 수를 입력해 주세요");
+        string dan = Console.ReadLine();
+        int aa = int.Parse(dan);
+
+        Console.WriteLine($"{dan}단 출력");
+
+        for (int i = 1; i < 10; i++)
+        {
+            Console.WriteLine(aa * i);
+        }
+        break;
+}
+
+//클로드 수정버전
+Console.WriteLine("구구단 프로그램에 오신걸 환영합니다.");
+
+while (true)
+{
+    Console.WriteLine();
+    Console.WriteLine("실행: 1, 종료: 0");
+
+    if (!int.TryParse(Console.ReadLine(), out int menu))
+    {
+        Console.WriteLine("숫자를 입력하세요.");
+        continue;
+    }
+
+    if (menu == 0)
+    {
+        Console.WriteLine("프로그램을 종료합니다.");
+        break;              // while 탈출
+    }
+
+    if (menu != 1)
+    {
+        Console.WriteLine("0 또는 1만 입력하세요.");
+        continue;
+    }
+
+    Console.Write("단 수를 입력해 주세요 (2~9): ");
+    if (!int.TryParse(Console.ReadLine(), out int dan) || dan < 2 || dan > 9)
+    {
+        Console.WriteLine("2~9 사이의 숫자를 입력하세요.");
+        continue;
+    }
+
+    Console.WriteLine($"--- {dan}단 ---");
+    for (int i = 1; i <= 9; i++)
+    {
+        Console.WriteLine($"{dan} x {i} = {dan * i}");
+    }
+}
+
+
+// 선생님 버전
+
+
+bool play = true;
+do
+{
+    Console.WriteLine("구구단 프로그램");
+    Console.WriteLine("실행을 원하면 1, 종료는 0");
+    Console.WriteLine("입력 : ");
+    string exit = Console.ReadLine();
+    int exitValue = int.Parse(exit);
+
+    switch (exitValue)
+    {
+        case 0:
+            play = false;
+            break;
+        case 1:
+            Console.WriteLine("구구단 출력하기");
+            Console.WriteLine("단 수를 입력해 주세요");
+            string dan = Console.ReadLine();
+            int aa = int.Parse(dan);
+
+            Console.WriteLine($"{dan}단 출력");
+
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine(aa * i);
+            }
+            break;
+        default:
+            Console.WriteLine("뭐하노");
+            break;
+    }
+}
+while (play);
+*/
 
 // Debuging
 // 코드의 흐름을 따라서 버그의 원인을 찾아서 수정하느 과정
