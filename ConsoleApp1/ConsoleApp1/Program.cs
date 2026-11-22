@@ -451,6 +451,38 @@ else
         i++;
     }
 
+    int count = 0;
+    while(count < 5)
+    {
+        if(count == 4)
+        {
+            break;
+        }
+        count++;
+
+        if(count % 2 == 1)
+        {
+            continue;   // 이 밑의 코드들은 전부 실행하지 않고 다시 조건부터 검사하는 키워드+
+        }
+
+        Console.WriteLine(count);
+    }
+
+    // 무한 루프
+    while(true)     // 조건이 항상 true여서 반복이 끝나지 않음
+    {
+        Console.WriteLine(count++);
+    }
+
+    int number = 10;
+    while(number <= 9)
+    {
+        Console.WriteLine("Hello World");
+    }
+    
+    ㄴ 이럴 경우 당연하지만 값이 나오지 않음
+    ㄴ 이럴 경우 사용하는게 아래의 do-while 문
+
     ## do-while
         조건을 나중에 검사하여 최소 한번의 실행은 보장
     
@@ -480,3 +512,14 @@ else
 
 
 
+// Debuging
+// 코드의 흐름을 따라서 버그의 원인을 찾아서 수정하느 과정
+/*
+    ### 버깅 방법 
+    1. Break : 내가 원하는 코드라인에 Break를 걸어서 멈추게 하는것
+        ㄴ 왼쪽에 회색 영역을 눌러서 빨간색 띄우면 거기서 break걸림
+        ㄴ f11 : 코드를 한 줄씩 따라 갈 수 있음        
+        ㄴ f10 : 코드를 실행단위(프로시저)단위로 넘어감
+    2. 조사식 : 사용되는 변수의 메모리 값을 추적할 수 있다
+
+*/
