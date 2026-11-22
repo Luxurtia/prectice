@@ -319,3 +319,71 @@ switch(day)
         break;
 }
 */
+
+// const와 enum
+/*
+    const, enum => 상수 
+
+    ## const
+    선언시 값을 넣고 절대 바꿀 수 없는 상수
+    
+    const int MaxHp = 100;
+    MaxHp = 200;   // 컴파일 에러! 상수는 바꿀 수 없음
+
+    규칙 
+    1. 선언과 동시에 값을 넣어야 됨
+    2. 값은 컴파일시 상수여야함
+        const int C = 10 * 2;              // OK (계산식도 상수면 가능)
+        const int D = Random.Range(0, 10); // 에러 (실행해야 알 수 있는 값)
+
+    ## enum(열거형)
+        ㄴ 상수들을 묶은 하나의 리스트
+        ㄴ 숫자에 이름을 붙이고 싶을때
+
+    enum Weapon
+    {
+        Sword,   // 0
+        Bow,     // 1
+        Staff    // 2
+    }
+
+    Weapon myWeapon = Weapon.Bow;
+
+    if (myWeapon == Weapon.Bow)
+    {
+        Console.WriteLine("활 장착");
+    }
+
+    조건
+    1. 기본적으로 int, 0에서 시작하는 정수 값 지정도 가능함
+    2. 내부 타입도 변경가능
+    3. 단, 정의 되지 않은 숫자가 들어가도 에러발생하지 않음
+
+enum Menu
+{
+    Dinner,     = 0
+    Food,       = 1
+    Drinking,   = 2
+}
+
+int menu = 2;
+
+switch ((Menu)menu) // switch(주어진 값)
+{
+    case Menu.Dinner: // case (조건값)
+        Console.WriteLine("저녁 메뉴입니다.");
+        break;
+    case Menu.Food:
+        Console.WriteLine("음식 메뉴입니다.");
+        break;
+    case Menu.Drinking:
+        Console.WriteLine("음료 메뉴입니다.");
+        break;
+    default:
+        Console.WriteLine("존재하지 않는 메뉴입니다.");
+        break;
+}
+
+
+*/
+
