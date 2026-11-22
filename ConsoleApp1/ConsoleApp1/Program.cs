@@ -231,3 +231,30 @@ Console.WriteLine(result3);
     float f = big;                // 123456792 ← 정밀도 부족으로 값이 바뀜
 */
 
+// 문자열
+/*
+    string name = "hello";
+    char first = name[0];
+
+    name[0] = 'H';  => string은 읽기 정용이라고 오류남
+    
+    ## ToUpper()
+    string name = "hello";
+    name.ToUpper();                // 결과를 아무도 안 받음
+    Console.WriteLine(name);       // hello  그대로
+
+    string upper = name.ToUpper(); // 새 문자열을 받음
+    Console.WriteLine(upper);      // HELLO
+    Console.WriteLine(name);       // hello  원본은 여전히 그대로
+
+    ## 대입 연산자
+    name += "world"
+    Console.WriteLine(name); => helloworld
+
+    name -= "world"는 안됨
+
+    name += 10; => 자연스럽게 "10"이라는 문자가 추가된다
+*/
+
+
+
